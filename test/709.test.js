@@ -1,4 +1,4 @@
 module.exports = {
-  data: [['Hello'], ['here'], ['LOVELY']],
+  args: [['Hello'], ['here'], ['LOVELY']],
   expected: ['hello', 'here', 'lovely'],
 };

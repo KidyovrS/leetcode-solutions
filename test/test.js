@@ -13,10 +13,10 @@ const modules = files.map((f) => {
 
 modules.forEach((m) => {
   describe(`${m.name}. ${m.func.name}`, () => {
-    for (let i = 0, len = m.data.length; i < len; i += 1) {
-      const data = m.data[i];
-      it(data.toString(), () => {
-        assert.strictEqual(m.func.apply(this, data), m.expected[i]);
+    for (let i = 0, len = m.args.length; i < len; i += 1) {
+      const args = m.args[i];
+      it(args.toString(), () => {
+        assert.strictEqual(m.func.apply(this, args), m.expected[i]);
       });
     }
   });
