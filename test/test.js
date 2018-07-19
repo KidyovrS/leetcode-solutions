@@ -16,7 +16,7 @@ modules.forEach((m) => {
     for (let i = 0, len = m.args.length; i < len; i += 1) {
       const args = m.args[i];
       it(args.toString(), () => {
-        assert.strictEqual(m.func.apply(this, args), m.expected[i]);
+        assert.deepStrictEqual(m.func.apply(this, args), m.expected[i]);
       });
     }
   });
