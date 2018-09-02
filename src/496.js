@@ -3,7 +3,7 @@
  * @param {number[]} nums
  * @return {number[]}
  */
-module.exports = function nextGreaterElement(findNums, nums) {
+module.exports.fn = function nextGreaterElement(findNums, nums) {
   const ret = [];
   findNums.forEach((findNum) => {
     const idx = nums.indexOf(findNum);
@@ -15,3 +15,14 @@ module.exports = function nextGreaterElement(findNums, nums) {
   });
   return ret;
 };
+
+module.exports.testData = [
+  {
+    args: [[4, 1, 2], [1, 3, 4, 2]],
+    expected: [-1, 3, -1],
+  },
+  {
+    args: [[2, 4], [1, 2, 3, 4]],
+    expected: [3, -1],
+  },
+];

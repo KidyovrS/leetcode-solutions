@@ -2,7 +2,7 @@
  * @param {string} moves
  * @return {boolean}
  */
-module.exports = function judgeCircle(moves) {
+module.exports.fn = function judgeCircle(moves) {
   let right = 0;
   let up = 0;
   for (let i = 0; i < moves.length; i += 1) {
@@ -24,3 +24,14 @@ module.exports = function judgeCircle(moves) {
   }
   return right === 0 && up === 0;
 };
+
+module.exports.testData = [
+  {
+    args: ['UD'],
+    expected: true,
+  },
+  {
+    args: ['LL'],
+    expected: false,
+  },
+];

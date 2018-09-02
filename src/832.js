@@ -2,7 +2,7 @@
  * @param {number[][]} A
  * @return {number[][]}
  */
-module.exports = function flipAndInvertImage(A) {
+module.exports.fn = function flipAndInvertImage(A) {
   const res = [];
   for (let i = 0; i < A.length; i += 1) {
     const inner = [];
@@ -13,3 +13,14 @@ module.exports = function flipAndInvertImage(A) {
   }
   return res;
 };
+
+module.exports.testData = [
+  {
+    args: [[[1, 1, 0], [1, 0, 1], [0, 0, 0]]],
+    expected: [[1, 0, 0], [0, 1, 0], [1, 1, 1]],
+  },
+  {
+    args: [[[1, 1, 0, 0], [1, 0, 0, 1], [0, 1, 1, 1], [1, 0, 1, 0]]],
+    expected: [[1, 1, 0, 0], [0, 1, 1, 0], [0, 0, 0, 1], [1, 0, 1, 0]],
+  },
+];

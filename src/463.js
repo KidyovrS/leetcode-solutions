@@ -2,7 +2,7 @@
  * @param {number[][]} grid
  * @return {number}
  */
-module.exports = function islandPerimeter(grid) {
+module.exports.fn = function islandPerimeter(grid) {
   const rowCount = grid.length;
   const colCount = grid[0].length;
   let ret = 0;
@@ -32,3 +32,10 @@ module.exports = function islandPerimeter(grid) {
 
   return ret;
 };
+
+module.exports.testData = [
+  {
+    args: [[[0, 1, 0, 0], [1, 1, 1, 0], [0, 1, 0, 0], [1, 1, 0, 0]]],
+    expected: 16,
+  },
+];

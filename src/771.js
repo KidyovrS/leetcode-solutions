@@ -3,7 +3,7 @@
  * @param {string} S
  * @return {number}
  */
-module.exports = function numJewelsInStones(J, S) {
+module.exports.fn = function numJewelsInStones(J, S) {
   let res = 0;
   for (let i = 0, len = S.length; i < len; i += 1) {
     if (J.indexOf(S[i]) > -1) {
@@ -12,3 +12,14 @@ module.exports = function numJewelsInStones(J, S) {
   }
   return res;
 };
+
+module.exports.testData = [
+  {
+    args: ['aA', 'aAAbbbb'],
+    expected: 3,
+  },
+  {
+    args: ['z', 'ZZ'],
+    expected: 0,
+  },
+];

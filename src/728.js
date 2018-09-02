@@ -3,7 +3,7 @@
  * @param {number} right
  * @return {number[]}
  */
-module.exports = function selfDividingNumbers(left, right) {
+module.exports.fn = function selfDividingNumbers(left, right) {
   const isDividingNumber = num => num
     .toString()
     .split('')
@@ -17,3 +17,10 @@ module.exports = function selfDividingNumbers(left, right) {
   }
   return arr;
 };
+
+module.exports.testData = [
+  {
+    args: [1, 22],
+    expected: [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 15, 22],
+  },
+];

@@ -2,7 +2,7 @@
  * @param {number[]} A
  * @return {number}
  */
-module.exports = function peakIndexInMountainArray(A) {
+module.exports.fn = function peakIndexInMountainArray(A) {
   let i = 0;
   let max = -1;
   A.forEach((value, index) => {
@@ -13,3 +13,14 @@ module.exports = function peakIndexInMountainArray(A) {
   });
   return i;
 };
+
+module.exports.testData = [
+  {
+    args: [[0, 1, 0]],
+    expected: 1,
+  },
+  {
+    args: [[0, 2, 1, 0]],
+    expected: 1,
+  },
+];

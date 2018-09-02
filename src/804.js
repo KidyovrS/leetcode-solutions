@@ -2,7 +2,7 @@
  * @param {string[]} words
  * @return {number}
  */
-module.exports = function uniqueMorseRepresentations(words) {
+module.exports.fn = function uniqueMorseRepresentations(words) {
   const arr = {
     a: '.-',
     b: '-...',
@@ -41,3 +41,10 @@ module.exports = function uniqueMorseRepresentations(words) {
   });
   return set.size;
 };
+
+module.exports.testData = [
+  {
+    args: [['gin', 'zen', 'gig', 'msg']],
+    expected: 2,
+  },
+];

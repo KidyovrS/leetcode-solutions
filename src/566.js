@@ -4,7 +4,7 @@
  * @param {number} c
  * @return {number[][]}
  */
-module.exports = function matrixReshape(nums, r, c) {
+module.exports.fn = function matrixReshape(nums, r, c) {
   const nRow = nums.length;
   const nCol = nums[0].length;
   if (nRow * nCol !== r * c) {
@@ -35,3 +35,14 @@ module.exports = function matrixReshape(nums, r, c) {
   }
   return ret;
 };
+
+module.exports.testData = [
+  {
+    args: [[[1, 2], [3, 4]], 1, 4],
+    expected: [[1, 2, 3, 4]],
+  },
+  {
+    args: [[[1, 2], [3, 4]], 2, 4],
+    expected: [[1, 2], [3, 4]],
+  },
+];

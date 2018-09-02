@@ -2,7 +2,7 @@
  * @param {string} str
  * @return {string}
  */
-module.exports = function toLowerCase(str) {
+module.exports.fn = function toLowerCase(str) {
   let res = '';
   for (let i = 0, len = str.length; i < len; i += 1) {
     const c = str.charCodeAt(i);
@@ -14,3 +14,18 @@ module.exports = function toLowerCase(str) {
   }
   return res;
 };
+
+module.exports.testData = [
+  {
+    args: ['Hello'],
+    expected: 'hello',
+  },
+  {
+    args: ['here'],
+    expected: 'here',
+  },
+  {
+    args: ['LOVELY'],
+    expected: 'lovely',
+  },
+];

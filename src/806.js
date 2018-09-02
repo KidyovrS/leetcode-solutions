@@ -3,7 +3,7 @@
  * @param {string} S
  * @return {number[]}
  */
-module.exports = function numberOfLines(widths, S) {
+module.exports.fn = function numberOfLines(widths, S) {
   const getIdx = char => char.charCodeAt(0) - 97;
   const ret = [1, 0];
 
@@ -19,3 +19,74 @@ module.exports = function numberOfLines(widths, S) {
 
   return ret;
 };
+
+module.exports.testData = [
+  {
+    args: [
+      [
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+      ],
+      'abcdefghijklmnopqrstuvwxyz',
+    ],
+    expected: [3, 60],
+  },
+  {
+    args: [
+      [
+        4,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+      ],
+      'bbbcccdddaaa',
+    ],
+    expected: [2, 4],
+  },
+];

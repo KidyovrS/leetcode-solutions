@@ -3,7 +3,7 @@
  * @param {character} C
  * @return {number[]}
  */
-module.exports = function shortestToChar(S, C) {
+module.exports.fn = function shortestToChar(S, C) {
   const len = S.length;
   const ret = new Array(len);
 
@@ -20,3 +20,10 @@ module.exports = function shortestToChar(S, C) {
 
   return ret;
 };
+
+module.exports.testData = [
+  {
+    args: ['loveleetcode', 'e'],
+    expected: [3, 2, 1, 0, 1, 0, 0, 1, 2, 2, 1, 0],
+  },
+];

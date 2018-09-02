@@ -2,7 +2,7 @@
  * @param {number[][]} grid
  * @return {number}
  */
-module.exports = function projectionArea(grid) {
+module.exports.fn = function projectionArea(grid) {
   const g = grid;
   const len = g.length;
   let ret = 0;
@@ -31,3 +31,18 @@ module.exports = function projectionArea(grid) {
 
   return ret;
 };
+
+module.exports.testData = [
+  {
+    args: [[[2]]],
+    expected: 5,
+  },
+  {
+    args: [[[1, 2], [3, 4]]],
+    expected: 17,
+  },
+  {
+    args: [[[1, 0], [0, 2]]],
+    expected: 8,
+  },
+];

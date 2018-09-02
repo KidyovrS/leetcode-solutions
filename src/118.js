@@ -2,7 +2,7 @@
  * @param {number} numRows
  * @return {number[][]}
  */
-module.exports = function generate(numRows) {
+module.exports.fn = function generate(numRows) {
   const ret = [];
   if (numRows === 0) {
     return ret;
@@ -23,3 +23,18 @@ module.exports = function generate(numRows) {
   }
   return ret;
 };
+
+module.exports.testData = [
+  {
+    args: [5],
+    expected: [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]],
+  },
+  {
+    args: [1],
+    expected: [[1]],
+  },
+  {
+    args: [0],
+    expected: [],
+  },
+];
