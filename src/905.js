@@ -3,11 +3,11 @@
  * @return {number[]}
  */
 module.exports.fn = function sortArrayByParity(A) {
-  let evenNums = [];
-  let oddNums = [];
+  const evenNums = [];
+  const oddNums = [];
 
-  A.forEach(num => {
-    let arr = num % 2 === 0 ? evenNums : oddNums;
+  A.forEach((num) => {
+    const arr = num % 2 === 0 ? evenNums : oddNums;
     arr.push(num);
   });
 
@@ -17,6 +17,6 @@ module.exports.fn = function sortArrayByParity(A) {
 module.exports.testData = [
   {
     args: [[3, 1, 2, 4]],
-    expected: [2, 4, 3, 1]
-  }
+    expected: [2, 4, 3, 1],
+  },
 ];

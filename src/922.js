@@ -5,10 +5,18 @@
 module.exports.fn = function sortArrayByParityII(A) {
   let evenIdx = 0;
   let oddIdx = 0;
-  let ret = [];
+  const ret = [];
 
-  A.forEach(num => {
-    ret[num % 2 === 0 ? evenIdx++ * 2 : oddIdx++ * 2 + 1] = num;
+  A.forEach((num) => {
+    let idx;
+    if (num % 2 === 0) {
+      idx = evenIdx * 2;
+      evenIdx += 1;
+    } else {
+      idx = oddIdx * 2 + 1;
+      oddIdx += 1;
+    }
+    ret[idx] = num;
   });
 
   return ret;
@@ -17,6 +25,6 @@ module.exports.fn = function sortArrayByParityII(A) {
 module.exports.testData = [
   {
     args: [[4, 2, 5, 7]],
-    expected: [4, 5, 2, 7]
-  }
+    expected: [4, 5, 2, 7],
+  },
 ];

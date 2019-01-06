@@ -1,5 +1,5 @@
-const { describe, it } = require('mocha');
-const assert = require('assert');
+/* eslint-disable no-undef */
+
 const globby = require('globby');
 const path = require('path');
 
@@ -15,8 +15,8 @@ globby
     if (m.fn && m.testData) {
       describe(`${m.num}. ${m.fn.name}`, () => {
         m.testData.forEach(({ args, expected }) => {
-          it(args.toString(), () => {
-            assert.deepEqual(m.fn.apply(this, args), expected);
+          test(args.toString(), () => {
+            expect(m.fn(...args)).toEqual(expected);
           });
         });
       });
