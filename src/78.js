@@ -13,7 +13,7 @@ module.exports.fn = function subsets(nums) {
 
     // pad zero
     if (str.length < len) {
-      str.unshift(...(new Array(len - str.length)));
+      str.unshift(...new Array(len - str.length));
     }
 
     // construct inner array
@@ -34,6 +34,6 @@ module.exports.fn = function subsets(nums) {
 module.exports.testData = [
   {
     args: [[1, 2, 3]],
-    expected: [[], [3], [2], [2, 3], [1], [1, 3], [1, 2], [1, 2, 3], [1]],
+    expected: [[], [3], [2], [2, 3], [1], [1, 3], [1, 2], [1, 2, 3]],
   },
 ];
